@@ -66,26 +66,23 @@ int main(void)
 				remove_task(&head, remove);
 			}
 		}
-		else if (x == 4)
-		{
-			task_t *temp = head;
-
-			while (temp != NULL)
-			{
-				head = head->next;
-				free(temp->dateStart);
-				free(temp->dateEnd);
-				free(temp->description);
-				free(temp);
-				temp = head;
-			}
-		}
 		else
 		{
 			printf("Command not correct !\n");
 		}
 		menu();
     	scanf("%d", &x);  
+	}
+	task_t *temp = head;
+
+	while (temp != NULL)
+	{
+		head = head->next;
+		free(temp->dateStart);
+		free(temp->dateEnd);
+		free(temp->description);
+		free(temp);
+		temp = head;
 	}
 	
 	return(0);
