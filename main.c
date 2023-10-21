@@ -78,6 +78,7 @@ int main(void)
 				free(temp->dateEnd);
 				free(temp->description);
 				free(temp);
+				temp = head;
 			}
 		}
 		else
