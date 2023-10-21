@@ -22,7 +22,6 @@ void remove_task(task_t **head, int position) {
             previous->next = current->next;
         }
         // Free the memory of the removed node
-		free(&(current->nb));
 		free(current->dateStart);
 		free(current->dateEnd);
 		free(current->description);

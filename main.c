@@ -73,7 +73,6 @@ int main(void)
 			while (temp != NULL)
 			{
 				head = head->next;
-				free(&(temp->nb));
 				free(temp->dateStart);
 				free(temp->dateEnd);
 				free(temp->description);
